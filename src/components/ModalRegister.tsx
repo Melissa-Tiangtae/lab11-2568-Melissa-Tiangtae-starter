@@ -67,9 +67,7 @@ export default function ModalRegister() {
     if (plan === "mini") total += 800;
     if (plan === "half") total += 1200;
     if (plan === "full") total += 1500;
-    // if (buyBottle) total += 200;
-    // if (buyShoes) total += 600;
-    // if (buyCap) total += 400;
+  
 
     if (buyBottle) extra += 200;
     if (buyShoes) extra += 600;
@@ -240,6 +238,8 @@ export default function ModalRegister() {
               </div>
             </div>
 
+             { buyBottle && buyCap && buyShoes && <span className="text-success d-block">(20% Discounted)</span>}
+
             <div className="alert alert-primary mt-3" role="alert">
               Promotion📢 Buy all items to get 20% Discount
             </div>
@@ -248,7 +248,7 @@ export default function ModalRegister() {
             <div>
               Total Payment : {computeTotalPayment().toLocaleString()} THB
               {/* Render below element conditionally when user get 20% discount */}
-             { buyBottle && buyCap && buyShoes && <span className="text-success d-block">(20% Discounted)</span>}
+            
             </div>
           </div>
           <div className="modal-footer">
