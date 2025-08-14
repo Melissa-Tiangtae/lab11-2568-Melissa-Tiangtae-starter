@@ -113,7 +113,7 @@ export default function ModalRegister() {
       setGenderError(true);
     }
 
-    if (fnameOk && lnameOk && planOk) {
+    if (fnameOk && lnameOk && planOk && genderOk) {
       alert(
         `Registration complete. Please pay money for ${computeTotalPayment().toLocaleString()} THB.`
       );
